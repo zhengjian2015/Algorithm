@@ -12,10 +12,36 @@
 </head>
 
 <body>
-<nav class="navbar navbar-inverse">
-    <ul class="navbar-header">
-        <a class="navbar-brand" href="#">My First Page</a>
-    </ul>
+<nav class="navbar navbar-inverse" role="navigation">
+<div class="container-fluid">
+    <div class="navbar-header">
+        <a class="navbar-brand" href="#">C640</a>
+    </div>
+    <div>
+    <ul class="nav navbar-nav">
+        <li class="active"><a href="#">首页</a></li>
+        <li><a href="#">待办事项</a></li>
+        {% if request.user.is_authenticated %}
+        <li><a href="#">当前用户：{{ request.user.name }}</a></li>
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                个人中心<b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li><a href="#">定制工具</a></li>
+                <li><a href="#">？</a></li>
+                <li><a href="#">？</a></li>
+                <li class="divider"></li>
+                <li><a href="#">修改个人信息</a></li>
+                <li class="divider"></li>
+                <li><a href="#">退出  </a></li>
+            </ul>
+        </li>
+        {% else %}
+        <li><a href="#">登陆</a></li>
+        <li><a href="#"></a></li>
+        {% endif %}
+</div>
 <nav>
 
 <div class="container navbar-inverse">
