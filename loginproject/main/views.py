@@ -8,4 +8,4 @@ def index(requset):
     return render(requset,"basemain.html")
 
 def accounts_profile(requset):
-    return render(requset,"basemain.html")
+    return render(requset,"accounts_profile.html")
