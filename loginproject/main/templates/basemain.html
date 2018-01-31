@@ -66,7 +66,26 @@
     var vm = new Vue({
         el:"#app",
         data:{
-            aaa:"",
+            email: "{{ request.user.email }}",
+            name: "{{ request.user.name }}",
+            sex: "{{ request.user.sex }}",
+            birthday: "{{ request.user.birthday }}",
+            job_number: "{{ request.user.job_number }}",
+
+            zhengzhi_mianmao: "{{ request.user.zhengzhi_mianmao }}",
+            zhengzhi_time: "{{ request.user.zhengzhi_time }}",
+
+            job: "{{ request.user.job }}",
+            job_time: "{{ request.user.job_time }}",
+            job_2: "{{ request.user.job_2 }}",
+            id_number: "{{ request.user.id_number }}",
+
+            xue_li: "{{ request.user.xue_li }}",
+            school: "{{ request.user.school }}",
+            graduate_time: "{{ request.user.graduate_time }}",
+            job_join_time: "{{ request.user.job_join_time }}",
+            team_belong: "{{ request.user.team_belong }}",
+            phone: "{{ request.user.phone }}"
         }
     });
     </script>

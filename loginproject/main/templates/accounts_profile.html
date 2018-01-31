@@ -2,4 +2,103 @@
 
 {% block title %}个人信息修改{% endblock %}
 
-{% block content %}<h2>Here!</h2>{% endblock %}
+{% block content %}<h2>Here!</h2>
+<div id="app">
+    <table class="table table-hover form-group">
+        <thead>
+            <tr>
+                <th>编号</th>
+                <th>项目</th>
+                <th>值</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>0</td>
+                <td>账户（不可改）</td>
+                <td><span v-text="email" class="form-control"></span></td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>姓名</td>
+                <td><input v-model="name" class="form-control"/></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>性别</td>
+                <td><input v-model="sex" class="form-control"/></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>生日</td>
+                <td><input type="data" v-model="birthday" class="form-control"/></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>工号</td>
+                <td><input v-model="job_number" class="form-control"/></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>政治面貌</td>
+                <td><input v-model="zhengzhi_mianmao" class="form-control"/></td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>政治时间</td>
+                <td><input type="data" v-model="zhengzhi_time" class="form-control"/></td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>工作</td>
+                <td><input v-model="job" class="form-control"/></td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>工作时间</td>
+                <td><input type="data" v-model="job_time" class="form-control"/></td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>工作2</td>
+                <td><input v-model="job_2" class="form-control"/></td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>身份证号</td>
+                <td><input type="data" v-model="job_2" class="form-control"/></td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>学历</td>
+                <td><input v-model="xue_li" class="form-control"/></td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>学校</td>
+                <td><input v-model="school" class="form-control"/></td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td>毕业时间</td>
+                <td><input type="data" v-model="graduate_time" class="form-control"/></td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td>入职时间</td>
+                <td><input type="data" v-model="job_join_time" class="form-control"/></td>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td>所属组</td>
+                <td><input v-model="team_belong" class="form-control"/></td>
+            </tr>
+            <tr>
+                <td>16</td>
+                <td>电话号码</td>
+                <td><input v-model="phone" class="form-control"/></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+{% endblock %}
