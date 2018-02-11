@@ -23,6 +23,7 @@
     <div>
     <ul class="nav navbar-nav">
         <li class="active"><a href="#">首页</a></li>
+        <li><a href="/program/modelone/">自主开发</a></li>
         <li><a href="#">待办事项</a></li>
         {% if request.user.is_authenticated %}
         <li><a href="/accounts/profile/">当前用户：{{ request.user.name }}</a></li>

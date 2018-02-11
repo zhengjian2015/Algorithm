@@ -33,3 +33,6 @@ def accounts_profile(requset):
         b.phone = a['phone']
         b.save()
     return render(requset,"accounts_profile.html")
+
+def modelone(requset):
+    return render(requset,"modelone.html")

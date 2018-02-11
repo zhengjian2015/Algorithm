@@ -21,5 +21,6 @@ urlpatterns = [
     url(r'^$',main.index),
     url(r'^accounts/',include('users.urls')),   
     url(r'^accounts/profile/',main.accounts_profile), 
+    url(r'^program/modelone/',main.modelone), 
     url(r'^admin/', admin.site.urls),
 ]
