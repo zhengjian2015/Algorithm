@@ -6,7 +6,7 @@ import java.util.Arrays;
 public class MergeSort {
     public void sort(int[] array,int left, int right) {
         if(right == left) return;
-        int mid = (right+left)/2;  //防止溢出
+        int mid = left+(right-left)/2;  //防止溢出
         //分成2部分
         //左边
         sort(array,left,mid);
@@ -44,8 +44,13 @@ public class MergeSort {
     }
 
     public static void main(String[] args) {
-        int[] arr = {1,2,9,5,3,4,8};
+        int[] arr = new SortTestHelper().generateRandomArray(10000,0,10000);
+        //System.out.println(Arrays.toString(arr));
+        long begin = System.nanoTime();
         new MergeSort().sort(arr,0,arr.length-1);
+        long end = System.nanoTime();
+        double time = (end - begin)/1000000000.0;
+        System.out.println("用时"+time+"s");
         System.out.println(Arrays.toString(arr));
     }
 }
