@@ -49,5 +49,7 @@ public class HeapSort1 {
         System.out.println("用时maxheap"+time2+"s");
         System.out.println("qucik用时"+time4+"s");
         System.out.println(Arrays.toString(arr));
+        System.out.println(Arrays.toString(arr1));
+        System.out.println(Arrays.toString(arr2));
     }
 }

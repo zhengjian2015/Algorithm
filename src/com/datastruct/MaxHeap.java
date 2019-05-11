@@ -90,6 +90,7 @@ public class MaxHeap<E extends Comparable<E>> {
         return ret;
     }
 
+    //如果当前元素比左右孩子最大元素要小就交换
     private void siftDown(int k) {
         //当k没有孩子 即 k左孩子所在索引比元素还大时循环不存在
         while (leftChild(k) < data.getSize() ) {
