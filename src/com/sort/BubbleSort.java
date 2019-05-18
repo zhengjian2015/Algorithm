@@ -2,6 +2,9 @@ package com.sort;
 
 import java.util.Arrays;
 
+/**
+ * 冒泡排序
+ */
 public class BubbleSort {
     public void bubbleSort(int[] array){
         int temp;

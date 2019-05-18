@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 /**
  * 在arr[i]中插入合适的位置
+ * 插入排序
  */
 public class InsertionSort {
     public void insertionSort(int[] array) {
