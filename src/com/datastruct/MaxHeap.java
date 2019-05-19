@@ -1,5 +1,12 @@
 package com.datastruct;
 
+/**
+ * 二叉堆是一棵完全二叉树
+ * 不一定是满二叉树，但是不满的一定是在右边（把元素先放进左边）
+ * 任意节点的值 都是大于等于孩子 节点的值
+ *
+ * @param <E>
+ */
 public class MaxHeap<E extends Comparable<E>> {
 
     private Array<E> data;

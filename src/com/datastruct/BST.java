@@ -8,7 +8,7 @@ import java.util.Stack;
  * 二叉树有天然的递归结构
  * 每个节点的左子树也是二叉树
  * 每个节点的右子树也是二叉树
- * 二叉树不一定是满的， 都是满的叫完全二叉树
+ * 二叉树不一定是满的， 都是满的叫满二叉树
  * NULL也是 二叉树
  * 二分搜索树 的每个节点的值
  * 大于其左子树的所有节点的值
@@ -190,7 +190,7 @@ public class BST<E extends Comparable<E>> {
             if (cur.left != null)
                 q.add(cur.left);
             if (cur.right != null)
-                q.  add(cur.right);
+                q.add(cur.right);
         }
     }
 
@@ -338,4 +338,10 @@ public class BST<E extends Comparable<E>> {
         return res.toString();
     }
 
+    /** ceil 和 floor 比这数最小的数 和最大的数 地板和天花板
+     *  rank select  还有支持重复元素的树
+     * 二分搜索树对应的形状可能有区别
+     * 比如 1，2，3，4，5，6 极端情况 就是个链表
+     * 为了预防这种情况 产生了平衡二叉树 其中红黑树就是这个的实现
+     */
 }
