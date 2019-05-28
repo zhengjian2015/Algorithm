@@ -5,7 +5,7 @@ package com.datastruct;
  */
 public class LinkedList<E> {
 
-    private class Node{
+    public class Node{
         public E e;
         public Node next;
 
@@ -21,6 +21,12 @@ public class LinkedList<E> {
         public Node(){
             this(null,null);
         }
+
+        @Override
+        public String toString(){
+            return e.toString();
+        }
+
     }
 
     //private Node head;
@@ -50,7 +56,8 @@ public class LinkedList<E> {
         head = node;
 */
         //head = new Node(e,head);
-        size++;
+        //size++;
+        add(0,e);
     }
 
     //在链表中添添加元素 得先找到前一元素
@@ -88,11 +95,11 @@ public class LinkedList<E> {
         for (int i = 0; i < index; i++) {
             pre = pre.next;
         }
-        Node node = new Node(e);
+        //Node node = new Node(e);
         //顺序很重要
-        node.next = pre.next;
-        pre.next = node;
-        //等价于 pre.next = new Node(e,pre.next);
+       /* node.next = pre.next;
+        pre.next = node;*/
+        pre.next = new Node(e,pre.next);
         size++;
     }
 
@@ -144,16 +151,18 @@ public class LinkedList<E> {
     }
 
     @Override
-    public String toString() {
+    public String toString() {    //（修改代码）
         StringBuilder res = new StringBuilder();
 
-        Node cur = dummyHead.next;
-        while (cur!=null){
+//        Node cur = dummyHead.next;	//遍历（从第一个元素开始）
+//        while(cur != null){
+//            res.append(cur + "->");	//res 中加入 cur节点+ "->"
+//            cur = cur.next;	//查看下一个节点
+//        }
+        for (Node cur = dummyHead.next; cur != null; cur = cur.next)    //上面三行的优雅写法
             res.append(cur + "->");
-            cur = cur.next;
-        }
-        res.append("Null");
+        res.append("NULL");    //到达链表结尾
 
-        return  res.toString();
+        return res.toString();
     }
 }
