@@ -1,4 +1,4 @@
-package com.datastruct;
+package com.datastruct.has;
 
 /**
  * 引出哈希的概念
@@ -27,4 +27,18 @@ package com.datastruct;
  *
  */
 public class Hash {
+
+    public static void main(String[] args) {
+        int a = 42;
+        System.out.println(((Integer)a).hashCode());
+
+        int b = -42;
+        System.out.println(((Integer)b).hashCode());
+
+        double c = 3.1416926;
+        System.out.println(((Double)c).hashCode());
+
+        String d = "immoc";
+        System.out.println(d.hashCode());
+    }
 }
